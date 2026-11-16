@@ -35,7 +35,7 @@ v_glslang=e1b562a8bed273a02f30b59b66a5d499793cede5
 v_spirv_tools=ef96ed763b43b59b33b31b362f09a02b729fa1c9
 v_spirv_headers=04fd3caa1e8267e4d95c806cad901181728e1006
 v_dav1d=54706fc6bc0cdecab7e9593974a4039cc038fca7 # 1.5.4
-v_libplacebo=31c3e281f07998115758c8931946252cd6ced0a7 # ThePotato97/Libplacebo webgpu-dm: the Dolby Vision DM, on v7.387.0
+v_libplacebo=bc0f5fd8317a34594a48ab64456cc70f52d168ed # ThePotato97/Libplacebo webgpu-dm: the Dolby Vision DM, on v7.387.0
 v_dovi=d1abe0e27ff2c7ab3339614d06db9f8a058af6b2 # libdovi 3.4.0
 
 ## Our forks: the tagged commit and the upstream one it builds on
