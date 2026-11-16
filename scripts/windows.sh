@@ -4,7 +4,7 @@
 archs="x86_64 aarch64"
 ships=(mpv)
 
-dep_ffmpeg=(zlib dav1d libxml2 nvcodec-headers)
+dep_ffmpeg=(zlib dav1d libxml2 nvcodec-headers atmos-render)
 dep_libxml2=(zlib)
 dep_freetype2=(zlib)
 dep_libass=(freetype2 fribidi harfbuzz unibreak)
@@ -39,6 +39,12 @@ package () (
 	for dll in libmpv-2.dll $($host-objdump -p "$prefix_dir/bin/libmpv-2.dll" | sed -n 's/^\s*DLL Name: //p'); do
 		[ -f "$runtime/$dll" ] && die "libmpv-2.dll imports the toolchain's $dll, which the app doesn't ship"
 		[ -f "$prefix_dir/bin/$dll" ] && $STRIP -o "$files/$dll" "$prefix_dir/bin/$dll"
+	done
+	# Nor may the DLLs shipped beside it (FFmpeg's link in atmos-render, Rust's unwinder with it).
+	for dll in "$files"/*.dll; do
+		for import in $($host-objdump -p "$dll" | sed -n 's/^\s*DLL Name: //p'); do
+			[ -f "$runtime/$import" ] && die "${dll##*/} imports the toolchain's $import, which the app doesn't ship"
+		done
 	done
 	cp -r "$prefix_dir/licenses" "$files/licenses"
 	license_index "$files"

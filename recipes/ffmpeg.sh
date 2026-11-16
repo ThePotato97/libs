@@ -69,7 +69,7 @@ case $platform in
 	windows)
 		args+=(
 			--target-os=mingw32 --cross-prefix=$host- --arch=$arch --pkg-config-flags=--static
-			--enable-{zlib,ffnvcodec,nvdec} --disable-avdevice
+			--enable-{zlib,ffnvcodec,nvdec,libatmos} --disable-avdevice
 			# the one part needing C++
 			--disable-filter=gfxcapture
 		)

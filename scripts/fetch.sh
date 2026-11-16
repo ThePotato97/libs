@@ -27,6 +27,12 @@ fetch () (
 	# Apart first, so an interrupted download starts over.
 	rm -rf "$1.part"
 	case $1 in
+		# Only services/atmos-render is built; the repository's submodules aren't needed.
+		atmos-render)
+			git init -q $1.part
+			git -C $1.part fetch -q --depth 1 https://github.com/ThePotato97/AIOStreams $v_atmos_render
+			git -C $1.part checkout -q FETCH_HEAD
+			;;
 		dav1d) clone_at $1.part https://github.com/videolan/dav1d $v_dav1d ;;
 		dovi) clone_at $1.part https://github.com/quietvoid/dovi_tool $v_dovi ;;
 		ffmpeg) clone_at $1.part https://github.com/ThePotato97/FFmpeg $v_ffmpeg ;;
@@ -47,7 +53,7 @@ fetch () (
 				$v_moltenvk_sha256
 			mkdir $1.part && tar -xf $1.tar -C $1.part --strip-components=1 && rm $1.tar
 			;;
-		mpv) clone_at $1.part https://github.com/AIOStreams/mpv $v_mpv ;;
+		mpv) clone_at $1.part https://github.com/ThePotato97/mpv $v_mpv ;;
 		nvcodec-headers) clone_at $1.part https://github.com/FFmpeg/nv-codec-headers $v_nvcodec_headers ;;
 		shaderc)
 			clone_at $1.part https://github.com/google/shaderc $v_shaderc
