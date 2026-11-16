@@ -48,6 +48,23 @@ jobs:
       - if: matrix.platform == 'android'
         uses: gradle/actions/setup-gradle@v6
 
+      # libplacebo comes from ThePotato97/Libplacebo, which is private: its read-only deploy key (the
+      # one the AIOStreams image build uses) lets git fetch it over SSH.
+      - name: Give git access to the private libplacebo
+        env:
+          DOVI_DM_SSH_KEY: ${{ secrets.DOVI_DM_SSH_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "$DOVI_DM_SSH_KEY" ]; then
+            echo "::error::The DOVI_DM_SSH_KEY secret is missing: the read-only deploy key of ThePotato97/Libplacebo"
+            exit 1
+          fi
+          key="$RUNNER_TEMP/libplacebo-key"
+          printf '%s\n' "$DOVI_DM_SSH_KEY" > "$key"
+          chmod 600 "$key"
+          git config --global core.sshCommand "ssh -i $key -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new"
+          git config --global url."git@github.com:ThePotato97/Libplacebo".insteadOf https://github.com/ThePotato97/Libplacebo
+
       - uses: actions/cache@v6
         with:
           path: prefix/${{ matrix.platform }}-${{ matrix.arch }}
