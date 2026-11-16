@@ -41,5 +41,5 @@ v_dovi=d1abe0e27ff2c7ab3339614d06db9f8a058af6b2 # libdovi 3.4.0
 ## Our forks: the tagged commit and the upstream one it builds on
 v_ffmpeg=cd9854028be96d65c5b62e51a1b982b2a5d76e76 # ThePotato97/FFmpeg aiostreams-atmos-objects: libatmos decoders, on aiostreams-dovi-mediacodec
 v_libass=6fd011533a0eea1d8eefa656a60f73daf23531c5 # aiostreams-20261029, on f61db567e6, after 0.17.5
-v_mpv=1ecb28d5ba710d3b46ac9681ed6444e2b7810be1 # ThePotato97/mpv aiostreams-atmos-spatial: ao_wasapi_spatial, on aiostreams-20261101
+v_mpv=f07efa872f8564e3299a792861c0ecd769985eb6 # ThePotato97/mpv aiostreams-atmos-spatial: ao_wasapi_spatial, on aiostreams-20261101
 v_atmos_render=afde20ea2c4758afa4ec75ca072fe5635ad5a554 # ThePotato97/AIOStreams: services/atmos-render with objects_api
