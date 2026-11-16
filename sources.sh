@@ -35,10 +35,10 @@ v_glslang=e1b562a8bed273a02f30b59b66a5d499793cede5
 v_spirv_tools=ef96ed763b43b59b33b31b362f09a02b729fa1c9
 v_spirv_headers=04fd3caa1e8267e4d95c806cad901181728e1006
 v_dav1d=54706fc6bc0cdecab7e9593974a4039cc038fca7 # 1.5.4
-v_libplacebo=275f7dea27924cdd34ab2e6c20e448b6bc4fab65 # v7.387.0
+v_libplacebo=31c3e281f07998115758c8931946252cd6ced0a7 # ThePotato97/Libplacebo webgpu-dm: the Dolby Vision DM, on v7.387.0
 v_dovi=d1abe0e27ff2c7ab3339614d06db9f8a058af6b2 # libdovi 3.4.0
 
 ## Our forks: the tagged commit and the upstream one it builds on
-v_ffmpeg=ff5da22416a12f0e74cdc0400b65613132ab793c # aiostreams-20261106, on 28fda48e0b
+v_ffmpeg=dfdbaa53d303bf8c6abad5c0186fe00cc086bb28 # ThePotato97/FFmpeg aiostreams-dovi-mediacodec, on aiostreams-20261106
 v_libass=6fd011533a0eea1d8eefa656a60f73daf23531c5 # aiostreams-20261029, on f61db567e6, after 0.17.5
 v_mpv=9aeb21d5b55ef3cc0877663621ca373055dfd5e6 # aiostreams-20261101, on a9a08cd171
