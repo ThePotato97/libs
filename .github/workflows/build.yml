@@ -23,7 +23,6 @@ jobs:
           - { platform: android, arch: x86_64 }
           - { platform: windows, arch: x86_64 }
           - { platform: windows, arch: aarch64 }
-          - { platform: macos, arch: arm64 }
     steps:
       - uses: actions/checkout@v7
 
@@ -102,7 +101,7 @@ jobs:
           unzip -q built/android-arm64/libs-android.aar -d joined
           for arch in armv7l x86_64; do unzip -q -o built/android-$arch/libs-android.aar 'jni/*' -d joined; done
           (cd joined && zip -q -r -X ../out/libs-android.aar .)
-          cp built/{windows,macos}-*/*.zip out/
+          cp built/windows-*/*.zip out/
           (cd out && sha256sum * | tee SHA256SUMS)
 
       - uses: actions/upload-artifact@v7
