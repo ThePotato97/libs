@@ -35,11 +35,11 @@ v_glslang=e1b562a8bed273a02f30b59b66a5d499793cede5
 v_spirv_tools=ef96ed763b43b59b33b31b362f09a02b729fa1c9
 v_spirv_headers=04fd3caa1e8267e4d95c806cad901181728e1006
 v_dav1d=54706fc6bc0cdecab7e9593974a4039cc038fca7 # 1.5.4
-v_libplacebo=bc0f5fd8317a34594a48ab64456cc70f52d168ed # ThePotato97/Libplacebo webgpu-dm: the Dolby Vision DM, on v7.387.0
+v_libplacebo=1b49ff5bfa93dea92c10def0b6789417231d191d # ThePotato97/Libplacebo webgpu-dm: the Dolby Vision DM, on v7.387.0
 v_dovi=d1abe0e27ff2c7ab3339614d06db9f8a058af6b2 # libdovi 3.4.0
 
 ## Our forks: the tagged commit and the upstream one it builds on
 v_ffmpeg=cd9854028be96d65c5b62e51a1b982b2a5d76e76 # ThePotato97/FFmpeg aiostreams-atmos-objects: libatmos decoders, on aiostreams-dovi-mediacodec
 v_libass=6fd011533a0eea1d8eefa656a60f73daf23531c5 # aiostreams-20261029, on f61db567e6, after 0.17.5
-v_mpv=d4c4a20f22480232bc21b6b29b6434a5084c14c9 # ThePotato97/mpv aiostreams-atmos-spatial: ao_wasapi_spatial, on aiostreams-20261101
+v_mpv=32c10e29bb777abe4940122afd8048792351a331 # ThePotato97/mpv aiostreams-atmos-spatial: ao_wasapi_spatial, on aiostreams-20261101
 v_atmos_render=afde20ea2c4758afa4ec75ca072fe5635ad5a554 # ThePotato97/AIOStreams: services/atmos-render with objects_api
