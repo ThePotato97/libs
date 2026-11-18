@@ -39,7 +39,7 @@ v_libplacebo=1b49ff5bfa93dea92c10def0b6789417231d191d # ThePotato97/Libplacebo w
 v_dovi=d1abe0e27ff2c7ab3339614d06db9f8a058af6b2 # libdovi 3.4.0
 
 ## Our forks: the tagged commit and the upstream one it builds on
-v_ffmpeg=7b44df26bb1b86774f7651cfcf3ea6fdc359469f # ThePotato97/FFmpeg aiostreams-atmos-objects: libatmos objects and speaker decoders, on aiostreams-dovi-mediacodec
+v_ffmpeg=3fdf67c0d16c160c08eb5049879416cc23829b44 # ThePotato97/FFmpeg aiostreams-atmos-objects: libatmos objects, speaker and headphone decoders, on aiostreams-dovi-mediacodec
 v_libass=6fd011533a0eea1d8eefa656a60f73daf23531c5 # aiostreams-20261029, on f61db567e6, after 0.17.5
 v_mpv=32c10e29bb777abe4940122afd8048792351a331 # ThePotato97/mpv aiostreams-atmos-spatial: ao_wasapi_spatial, on aiostreams-20261101
 v_atmos_render=61827c23d0279f4f98503e7b40b6312e71a537f9 # ThePotato97/AIOStreams: services/atmos-render with objects_api and the native ar_* interface
