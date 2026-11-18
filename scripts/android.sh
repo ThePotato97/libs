@@ -3,7 +3,7 @@
 archs="armv7l arm64 x86 x86_64"
 ships=(mpv dovi)
 
-dep_ffmpeg=(mbedtls dav1d libxml2)
+dep_ffmpeg=(mbedtls dav1d libxml2 atmos-render)
 dep_libass=(freetype2 fribidi harfbuzz unibreak)
 dep_mpv=(ffmpeg libass lua libplacebo)
 

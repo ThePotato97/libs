@@ -63,7 +63,9 @@ case $platform in
 		args+=(
 			--target-os=android --cross-prefix=$host- --nm=llvm-nm --arch=${host%%-*} --cpu=$cpu
 			--extra-cflags="-I$prefix_dir/include $cflags" --extra-ldflags="-L$prefix_dir/lib"
-			--enable-{jni,mediacodec,mbedtls} --disable-stripping
+			--enable-{jni,mediacodec,mbedtls,libatmos} --disable-stripping
+			# atmos-render's Rust runtime libraries come from its Libs.private
+			--pkg-config-flags=--static
 		)
 		;;
 	windows)
